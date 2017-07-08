@@ -1,0 +1,101 @@
+.item-curso {
+    list-style: none;
+    width: auto;
+    margin: 0;
+
+    cursor: hand;
+    cursor: pointer;
+
+    /* no select*/
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+
+}
+.curso-ant{
+    background-color: #ffbebe;
+}
+.curso-sig {
+    background-color: rgb(138, 255, 195);
+}
+
+.curso-ant-ant {
+    background-color: #ffbebe;
+
+    background: #ffbebe; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #ffbebe ,white , white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ffbebe,white , white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ffbebe,white , white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #ffbebe ,white , white); /* Standard syntax */
+}
+
+
+.inf {
+    background: rgb(12, 127, 220);
+    color: white;
+}
+
+.fym {
+    background: #ff827d;
+    color: white;
+}
+
+.let {
+    background: #b5c067;
+    color: white;
+}
+
+.result-fila-tot{
+    color: black;
+}
+.td-cent{
+    text-align: center;
+}
+
+/*           ----              */
+.num-cred {
+    display: inline-block;
+    border: .06em solid rgb(255, 255, 255);
+    border-radius: .34em;
+    margin: .06em;
+    text-align: center;
+    vertical-align: middle;
+    list-style: none;
+    color: white;
+    width: 1.2em;
+}
+
+.disabled {
+    opacity: 0.46;
+    cursor: default;
+}
+
+.ico-check {
+    line-height: inherit;
+    vertical-align: middle;
+    height: auto;
+    width: 1.2em;
+    text-align: center;
+    color: #177700;
+    font-size: 1.11em;
+    text-shadow: 0 0 .06em #3af336;
+}
+
+#extwidget li:hover {
+    background-color: #dcdcdc;
+}
+
+
+.item-rqs-anim-selec {
+    animation: pulse 1.3s;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #c9c3c3;
+    }
+    100% {
+        background-color: white;
+    }
+}

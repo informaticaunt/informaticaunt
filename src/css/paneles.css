@@ -1,0 +1,84 @@
+
+.panel-ciclo {
+    padding: .1rem;
+    margin: .12em;
+    background-color: white;
+    border: .06em solid #d9d9d9;
+    border-radius: .4em;
+}
+
+.leyenda {
+    width: auto;
+    padding: 0px .8rem;
+    margin: 0rem 1.1rem;
+    display: block;
+    font-size: inherit;
+    line-height: inherit;
+    color: #696969;
+    background-color: rgb(244,244,244);
+    border: .06em solid #e5e5e5;
+    border-radius: .4em;
+    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);*/
+    /*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);*/
+}
+#extwidget{
+    background-color: white;
+    width: 100%;
+    padding: 0;
+    margin: .7em 0;
+}
+.widget {
+    width: 1500px;
+    height: 750px;
+    margin: auto;
+    padding:0;
+    align-self: center;
+
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: inherit;
+}
+
+.panelResult {
+    font-size: inherit;
+    padding: 0 .1rem;
+    margin: .14em;
+    background-color: white;
+    border: .06em solid #bfbfbf;
+    border-radius: 5px;
+}
+
+.tablaResult{
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    position: inherit;
+    bottom: inherit;
+}
+
+.btn-font{
+    font-size: inherit;
+    padding: .34em;
+    margin: .32em;
+}
+
+/*   ------pos fixed--------     */
+.panelrescambio{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;/*solid #bfbfbf;*/
+    /*border-radius: 5px;*/
+}
+.tablarescambio{
+    width:100%;
+    margin: 0;
+    padding: 0;
+
+    position:fixed;
+    bottom:0;
+    z-index: +1;
+}
+
+
