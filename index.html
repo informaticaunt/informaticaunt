@@ -6,23 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="shortcut icon" type="image/png" href="src/favicon-laptop.ico" class="">
-    <title>Informática</title>
-
+    <title>Escuela de Informática - UNT</title>
 </head>
+
 <body>
-
+<!--titulos-->
 <div class="container">
-
-    <h4 class="my-3">Escuela de Informática</h4>
-
+    <h4 class="my-3 text-center">Escuela Académico Profesional de Informática</h4>
+    <h5 class="mb-0 p-0 text-center">Aplicativo para el cálculo de créditos</h5>
 </div>
 
-<div id="extwidget" class="container-fluid">
-    <div class="widget" id="widget">
 
-        <!--
+<div id="extwidget" class="">
+    <!--div btn manual-->
+    <div id="div-btn-manual" class="m-0 pt-0 d-flex flex-row-reverse">
+        <button id="btn-manual" class="fa fa-book btn btn-secondary m-0 h1"> Manual</button>
+    </div>
+
+    <!--aplicativo-->
+    <div class="widget" id="widget">
+        <!-- . . .
         Paneles ciclo
-        -->
+         . . . -->
 
         <fieldset id="panelResult" class="panelResult">
 
@@ -70,59 +75,70 @@
                 <button id="btn-noselec" class="btn btn-secondary btn-font"> Quitar selección</button>
                 <a href="#widget" class="fa fa-window-maximize"></a>
             </div>
-        </fieldset>
+        </fieldset>   <!--panel resultado-->
     </div>
+
 </div>
 
-<div class="container my-4">
-    <h6>Instrucciones</h6>
-    <ol class="">
-        <li>Seleccione los cursos deseados para calcular la cantidad de créditos. En el último panel se muestran los
-            resultados, así como los mínimos y el total.
-        </li>
-        <li>Cada curso tiene un número antepuesto, el cuál lleva un color:</li>
-        <ul>
-            <li>El número(4 ó 2) indica la cantidad de créditos del curso.</li>
-            <li>El color indica:</li>
+<!--             modal         -->
+<div id="modal">
+    <div id="modal-content">
+        <span id="cerrar-modal">&times;</span>
+        <p>Instrucciones</p>
+        <ol class="">
+            <li>Seleccione los cursos deseados para calcular la cantidad de créditos. En el último panel se muestran
+                los
+                resultados, así como los mínimos y el total.
+            </li>
+            <li>Cada curso tiene un número antepuesto, el cuál lleva un color:</li>
             <ul>
-                <li><span class="inf px-2" style="border-radius: .4rem">color</span>, si el curso pertenece a
-                    Informática.
-                </li>
+                <li>El número(4 ó 2) indica la cantidad de créditos del curso.</li>
+                <li>El color indica:</li>
+                <ul>
+                    <li><span class="inf px-2 rounded">color</span>, si el curso pertenece a
+                        Informática.
+                    </li>
 
-                <li><span class="fym px-2" style="border-radius: .4rem">color</span>, si el curso pertenece a Física y
-                    Matemática.
-                </li>
+                    <li><span class="fym px-2 rounded">color</span>, si el curso pertenece a
+                        Física y
+                        Matemática.
+                    </li>
 
-                <li><span class="let px-2" style="border-radius: .4rem">color</span>, si el curso pertenece a Letras.
-                </li>
+                    <li><span class="let px-2 rounded">color</span>, si el curso pertenece a
+                        Letras.
+                    </li>
+                </ul>
             </ul>
-        </ul>
-        <li>Los cursos tienen una estructura de árbol, por lo cuál algunos tendrán "padres" y/o "hijos" o ninguno.
-            Y se mostrarán de color:
-        </li>
+            <li>Los cursos tienen una estructura de árbol, por lo cuál algunos tendrán "padres" y/o "hijos" o
+                ninguno.
+                Y se mostrarán de color:
+            </li>
             <ul>
-                <li><span class="curso-ant px-2" style="border-radius: .4rem">color</span>, los
+                <li><span class="curso-ant px-2 rounded">color</span>, los
                     requisitos("padres") del curso sobre el cuál esté el cursor.
                 </li>
-                <li><span class="curso-sig px-2" style="border-radius: .4rem">color</span>, los cursos que
+                <li><span class="curso-sig px-2 rounded">color</span>, los cursos que
                     habilita("hijos") el curso sobre el cuál esté el cursor.
                 </li>
             </ul>
-        </li>
-        <li>Los cursos que estén bloqueados, se desbloquearán cuando sus requisitos("padres") estén seleccionados. Los cursos
-            que inicialmente estén desbloqueados, no tienen requisitos.
-        </li>
-        <li>Si se quita la selección a un curso se bloquerán los cursos que habilita, a su vez, estos bloquearán a los siguientes. Es decir si se quita la selección a un "padre", se bloquearán los "hijos", "nietos",
-            etc, independientemente de si estos se encuentren bloqueados, desbloqueados o seleccionados. <br>
-        </li>
-        <li>Shift + Click: Selecciona desde el primer curso hasta donde se haga click.</li>
-        <li>Ctrl + Click: Selecciona todos los requisitos necesarios para habilitar el curso donde se haga click, incluyendo también a esté  en la selección.</li>
-        <li>Los colores mencionados se verán de un tono más claro si los cursos están bloqueados.</li>
-    </ol>
-
-
+            </li>
+            <li>Los cursos que estén bloqueados, se desbloquearán cuando sus requisitos("padres") estén
+                seleccionados. Los cursos que inicialmente estén desbloqueados, no tienen requisitos.
+            </li>
+            <li>Si se quita la selección a un curso se bloquerán los cursos que habilita, a su vez, estos bloquearán
+                a los
+                siguientes. Es decir si se quita la selección a un "padre", se bloquearán los "hijos", "nietos",
+                etc, independientemente de si estos se encuentren bloqueados, desbloqueados o seleccionados. <br>
+            </li>
+            <li>Shift + Click: Selecciona desde el primer curso hasta donde se haga click.</li>
+            <li>Ctrl + Click: Selecciona todos los requisitos necesarios para el curso en el cuál se haga click,
+                incluyendo
+                también a esté en la selección.
+            </li>
+            <li>Los colores mencionados se verán de un tono más claro si los cursos están bloqueados.</li>
+        </ol>
+    </div>
 </div>
-
 
 <!---------------------    .     ------------------------->
 <link rel="stylesheet" href="src/bootstrap4a6/css/bootstrap.min.css">
